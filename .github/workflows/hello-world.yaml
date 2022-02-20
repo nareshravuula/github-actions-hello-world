@@ -1,13 +1,14 @@
 name: Hello-World
-
 on: [push]
-
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
       - name: echo string
         run: echo "Hello World"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
       - name: multiline script
         run: |
           node -v
