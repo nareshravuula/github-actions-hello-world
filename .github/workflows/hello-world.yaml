@@ -6,10 +6,11 @@ jobs:
     steps:
       - name: echo string
         run: echo "Hello World"
-  get-version:
+  get-versions:
     runs-on: ubuntu-latest
     steps:
       - name: multiline script
         run: |
           node -v
           npm -v
+          ansible -v
