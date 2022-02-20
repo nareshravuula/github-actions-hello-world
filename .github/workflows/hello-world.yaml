@@ -17,3 +17,11 @@ jobs:
           packer --version
           dotnet --info
           nginx -V
+  exec-python-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: execute Python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
