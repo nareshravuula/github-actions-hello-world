@@ -16,3 +16,4 @@ jobs:
           ansible --version
           packer --version
           dotnet --info
+          nginx -V
