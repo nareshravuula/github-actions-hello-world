@@ -31,3 +31,11 @@ jobs:
           print('Operating system:', platform.system())
           print('Python compiler:', platform.python_compiler())
         shell: python
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Current Directory - Powershell (default)
+        run: Get-Location
+      - name: Current Directory - Bash
+        run: pwd
+        shell: bash
