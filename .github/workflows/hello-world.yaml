@@ -23,5 +23,6 @@ jobs:
       - name: execute Python command
         run: |
           import platform
-          print(platform.processor())
+          print('Platform processor:', platform.processor())
+          print('Platform architecture:', platform.architecture())
         shell: python
