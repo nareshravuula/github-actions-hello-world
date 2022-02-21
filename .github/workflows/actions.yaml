@@ -16,10 +16,10 @@ jobs:
       - name: List files
         run: |
           pwd
-          ls
+          ls -a
       - name: List after Checkout
         uses: actions/checkout@v1
       - name: List files after Checkout
         run: |
           pwd
-          ls
+          ls -a
