@@ -1,0 +1,4 @@
+name: Dispatch Event
+on:
+  repository_dispatch:
+    types: [build]
