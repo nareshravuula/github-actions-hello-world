@@ -2,3 +2,9 @@ name: Dispatch Event
 on:
   repository_dispatch:
     types: [build]
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo string
+        run: echo "Hello World Dispatch Event."
