@@ -1,0 +1,10 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    - cron:"0/2 * * * *"
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo string
+        run: echo "Hello World"
