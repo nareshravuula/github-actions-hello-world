@@ -13,3 +13,7 @@ jobs:
           who-to-greet: Naresh Ravuula
       - name: Log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: List files
+        run: |
+          pwd
+          ls
