@@ -23,3 +23,9 @@ jobs:
         run: |
           pwd
           ls -a
+      - name: List Environment Variables
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
