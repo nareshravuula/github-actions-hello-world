@@ -4,7 +4,7 @@ env:
   WF_ENV: Available to All jobs within this workflow
 
 jobs:
-  log-env:
+  log-custom-env-variables:
     runs-on: ubuntu-latest
     env:
       JOB_ENV: Available to All steps within this job
@@ -21,3 +21,18 @@ jobs:
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
           echo "STEP_ENV: ${STEP_ENV}"
+  log-system-env-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display System Variables
+        run: |
+          echo "HOME: ${HOME}"
+          echo "RUNNER_OS: ${RUNNER_OS}"
+          echo "GITHUB_ACTION: ${GITHUB_ACTION}"
+          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+          echo "GITHUB_ENV: ${GITHUB_ENV}"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB_JOB: ${GITHUB_JOB}"
+          echo "GITHUB_PATH: ${GITHUB_PATH}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
