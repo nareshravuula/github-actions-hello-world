@@ -1,7 +1,7 @@
 name: Environment Variables Demo
 on: [push]
 env:
-  WF_ENV: Available to All jobs within this workflow
+  WF_ENV: ${{ secrets.WF_ENV }}
 
 jobs:
   log-custom-env-variables:
