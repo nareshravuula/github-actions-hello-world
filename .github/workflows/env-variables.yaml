@@ -11,14 +11,12 @@ jobs:
     steps:
       - name: Log Env Variables
         env:
-          STEP_ENV: Available to ONLY this steps within this job
+          STEP_ENV: Available to ONLY this step within this job
         run: |
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
           echo "STEP_ENV: ${STEP_ENV}"
       - name: Log Env Variables in other Step
-        env:
-          STEP_ENV: Available to ONLY this steps within this job
         run: |
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
