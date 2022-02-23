@@ -72,7 +72,7 @@ jobs:
           echo "GITHUB_JOB: ${GITHUB_JOB}"
           echo "GITHUB_PATH: ${GITHUB_PATH}"
           echo "GITHUB_REF: ${GITHUB_REF}"
-          echo "github.workflow: ${{ github.workflow }}"
+          echo "github.ref_name: ${{ github.ref_name }}"
   if-Windows-else:
     runs-on: macos-latest
     steps:
