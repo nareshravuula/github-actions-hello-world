@@ -63,7 +63,7 @@ jobs:
     steps:
       - name: Display System Variables
         run: |
-          echo "HOME: ${HOME}"
+          echo "HOME: $HOME"
           echo "RUNNER_OS: ${RUNNER_OS}"
           echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
           echo "GITHUB_ENV: ${GITHUB_ENV}"
