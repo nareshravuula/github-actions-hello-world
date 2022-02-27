@@ -1,15 +1,15 @@
-name: Decrypt File
-on: push
-jobs:
-  decrypt-file:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Decrypt file
-        run: |
-          mkdir $HOME/secrets
-          gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $HOME/secrets/my_secrets.json my_secrets.json.gpg
-        env:
-          PASSPHRASE: ${{ secrets.PASSPHRASE }}
-      - name: Display file content
-        run: cat $HOME/secrets/my_secrets.json
+# name: Decrypt File
+# on: push
+# jobs:
+#   decrypt-file:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: Decrypt file
+#         run: |
+#           mkdir $HOME/secrets
+#           gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $HOME/secrets/my_secrets.json my_secrets.json.gpg
+#         env:
+#           PASSPHRASE: ${{ secrets.PASSPHRASE }}
+#       - name: Display file content
+#         run: cat $HOME/secrets/my_secrets.json
